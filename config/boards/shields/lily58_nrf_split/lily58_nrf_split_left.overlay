@@ -1,0 +1,11 @@
+#include "lily58_nrf_split.dtsi"
+
+ / {
+    chosen {
+        zmk,kscan = &key_matrix;
+    };
+};
+
+ / {
+    zmk,split-role = "central";
+};

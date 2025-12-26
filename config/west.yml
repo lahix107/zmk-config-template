@@ -9,3 +9,8 @@ manifest:
       import: app/west.yml
   self:
     path: config
+build:
+  - board: nice_nano_v2
+    shield: lily58_nrf_split_left
+  - board: nice_nano_v2
+    shield: lily58_nrf_split_right

@@ -1,0 +1,28 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
+&default_transform {
+    col-count = <7>;
+    row-count = <5>;
+};
+
+ / {
+    key_matrix: key_matrix_0 {
+        compatible = "zmk,matrix-transform";
+
+        // Rows: 017, 020, 022, 024, 011
+        row-gpios = <&gpio0 17 GPIO_ACTIVE_LOW>,
+                    <&gpio0 20 GPIO_ACTIVE_LOW>,
+                    <&gpio0 22 GPIO_ACTIVE_LOW>,
+                    <&gpio0 24 GPIO_ACTIVE_LOW>,
+                    <&gpio0 11 GPIO_ACTIVE_LOW>;
+
+        // Cols: 100, 106, 031, 029, 002, 115, 111
+        col-gpios = <&gpio1 0 GPIO_ACTIVE_LOW>,  // 100
+                    <&gpio1 6 GPIO_ACTIVE_LOW>,  // 106
+                    <&gpio0 31 GPIO_ACTIVE_LOW>, // 031
+                    <&gpio0 29 GPIO_ACTIVE_LOW>, // 029
+                    <&gpio0 2 GPIO_ACTIVE_LOW>,  // 002
+                    <&gpio1 15 GPIO_ACTIVE_LOW>, // 115
+                    <&gpio1 11 GPIO_ACTIVE_LOW>; // 111
+    };
+};
